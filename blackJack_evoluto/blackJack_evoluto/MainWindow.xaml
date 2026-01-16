@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:blackJack_evoluto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        
+        <Image HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1920" Source="/banco.jpg" Stretch="Fill"/>
+
+        <Image HorizontalAlignment="Center" Height="1064" VerticalAlignment="Top" Width="1920" Source="/bordo.png" Stretch="Fill" Margin="0,-148,0,0"/>
+
+
     </Grid>
 </Window>

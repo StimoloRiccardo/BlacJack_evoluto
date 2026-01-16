@@ -23,6 +23,7 @@ namespace blackJack_evoluto
         public MainWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
     }
 }
