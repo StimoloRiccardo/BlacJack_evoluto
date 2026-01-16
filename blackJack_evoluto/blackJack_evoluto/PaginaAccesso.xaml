@@ -13,12 +13,16 @@
                 <GradientStop Color="Black" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label_nomeUtente" Content="Nome Utente:" HorizontalAlignment="Left" Height="32" Margin="24,27,0,0" VerticalAlignment="Top" Width="118" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
-        <TextBox x:Name="txtBox_nomeUtente" HorizontalAlignment="Left" Height="27" Margin="23,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold"/>
-        <Label x:Name="label_password" Content="Password:" HorizontalAlignment="Left" Height="32" Margin="23,108,0,0" VerticalAlignment="Top" Width="119" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
-        <TextBox x:Name="txtBox_Password" HorizontalAlignment="Left" Height="27" Margin="23,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="label_nomeUtente" Content="Nome Utente o email:" HorizontalAlignment="Left" Height="32" Margin="6,27,0,0" VerticalAlignment="Top" Width="154" Foreground="White" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2" FontSize="14"/>
+        <TextBox x:Name="txtBox_nomeUtente" HorizontalAlignment="Left" Height="27" Margin="6,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="label_password" Content="Password:" HorizontalAlignment="Left" Height="32" Margin="6,108,0,0" VerticalAlignment="Top" Width="154" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
         <Button x:Name="button_registrati" Content="Registrati" HorizontalAlignment="Left" Height="32" Margin="56,227,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" Click="button_registrati_Click"/>
         <Button Content="Accedi" HorizontalAlignment="Left" Height="31" Margin="23,196,0,0" VerticalAlignment="Top" Width="119" Background="#FF007F19" BorderBrush="White" Foreground="White" Click="Button_Click"/>
+        <Button x:Name="button_password" HorizontalAlignment="Left" Height="27" Margin="130,145,0,0" VerticalAlignment="Top" Width="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click_1">
+            <Image x:Name="immagine_pulsante" Source="/imgs/non_sento.png" Stretch="Uniform"/>
+        </Button>
+        <PasswordBox x:Name="pwBox_password" HorizontalAlignment="Left" Height="27" Margin="6,145,0,0" VerticalAlignment="Top" Width="124" Background="{x:Null}" BorderBrush="White" Foreground="White"/>
+        <TextBox x:Name="txtBox_Password" Visibility="Collapsed" HorizontalAlignment="Left" Height="27" Margin="6,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" Background="{x:Null}" BorderBrush="#FFFDFDFD" Foreground="White"/>
 
     </Grid>
 </Window>

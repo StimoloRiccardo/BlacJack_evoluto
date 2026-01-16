@@ -39,11 +39,13 @@ namespace blackJack_evoluto
                     {
                         File.CreateText(path);
                         sw.WriteLine("Nome ; Cognome; Email ; Nome Utente ; Numero telefono ; Saldo iniziale ; Password");
-                        File.AppendAllText(path, riga + Environment.NewLine);
+                        sw.WriteLine(riga + Environment.NewLine);
+                        this.Close();
                     }
                     else
                     {
-                        File.AppendAllText(path, riga + Environment.NewLine);
+                        sw.WriteLine(riga + Environment.NewLine);
+                        this.Close();
                     }
                 }
             }

@@ -20,6 +20,8 @@ namespace blackJack_evoluto
     /// </summary>
     public partial class PaginaAccesso : Window
     {
+        Giocatore player;
+        bool passwordVisibile = false;
         public PaginaAccesso()
         {
             InitializeComponent();
@@ -29,26 +31,27 @@ namespace blackJack_evoluto
         {
             String riga = txtBox_nomeUtente.Text + ";" + txtBox_Password.Text;
             String[] campi = riga.Split(';');
-            string path = "Utenti.csv";
-            string nomeUtenteDaCercare = txtBox_nomeUtente.Text;
-            string password = null;
+            String path = "Utenti.csv";
+            String nomeUtenteDaCercare = txtBox_nomeUtente.Text;
 
             if (File.Exists(path))
             {
                 if (campi.Length==2)
                 {
-                    foreach (var rigaCaricata in File.ReadLines(path).Skip(1))
+                    foreach (var rigaCaricata in File.ReadLines(path))
                     {
-                        var campiCaricati = rigaCaricata.Split(';');
+                        String[] campiCaricati = rigaCaricata.Split(';');
                         if (campiCaricati.Length == 7)
                         {
-                            if (campiCaricati[3].Trim() == nomeUtenteDaCercare)
+                            if (campiCaricati[3].Trim() == nomeUtenteDaCercare || campiCaricati[2].Trim() == nomeUtenteDaCercare)
                             {
-                                if (txtBox_Password.Text == campiCaricati[6].Trim())
+                                if (txtBox_Password.Text == campiCaricati[6].Trim() || pwBox_password.Password == campiCaricati[6].Trim())
                                 {
                                     MessageBox.Show("accesso eseguito con successo, bentornato!");
+                                    player = new Giocatore(campiCaricati[0], campiCaricati[1], campiCaricati[2], campiCaricati[3], campiCaricati[4], double.Parse(campiCaricati[5]), campiCaricati[6]);
+                                    this.Close();
                                 }
-                                else if (txtBox_Password.Text == campiCaricati[6].Trim())
+                                else if (txtBox_Password.Text != campiCaricati[6].Trim() || pwBox_password.Password != campiCaricati[6].Trim())
                                 {
                                     MessageBox.Show("password errata, riprova");
                                 }
@@ -56,7 +59,11 @@ namespace blackJack_evoluto
                             }
                         }
                     }
-                    MessageBox.Show("nome utente non trovato, registrati");
+                    
+                    if (player == null)
+                    {
+                        MessageBox.Show("nome utente non trovato, registrati per accedere");
+                    }
                 }
                 else
                 {
@@ -65,10 +72,35 @@ namespace blackJack_evoluto
             }
         }
 
+        public Giocatore getGiocatore()
+        {
+            return player;
+        }
+
         private void button_registrati_Click(object sender, RoutedEventArgs e)
         {
             PaginaRegistrazione p = new PaginaRegistrazione();
             p.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (passwordVisibile)
+            {
+                pwBox_password.Password = txtBox_Password.Text;
+                txtBox_Password.Visibility = Visibility.Collapsed;
+                pwBox_password.Visibility = Visibility.Visible;
+                passwordVisibile = false;
+                //immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_vedo.png"));
+            }
+            else if (!passwordVisibile)
+            {
+                txtBox_Password.Text = pwBox_password.Password;
+                pwBox_password.Visibility = Visibility.Collapsed;
+                txtBox_Password.Visibility = Visibility.Visible;
+                //immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_sento.png"));
+
+            }
         }
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace blackJack_evoluto
 {
-    internal class Giocatore
+    public class Giocatore
     {
         private string nomeUtente, password, email, numeroTelefono, nome, cognome;
         private double saldo;
         private int numeroVittorie;
 
-        public Giocatore(string nome, string cognome, string nomeUtente, string email, string numeroTelefono, string password, double saldo)
+        public Giocatore(string nome, string cognome, string email, string nomeUtente, string numeroTelefono, double saldo, string password)
         {
             this.nome = nome;
             this.cognome = cognome;
@@ -21,6 +21,16 @@ namespace blackJack_evoluto
             this.password = password;
             this.email = email;
             this.saldo = saldo;
+        }
+
+        public string getNomeUtente()
+        {
+            return nomeUtente;
+        }   
+
+        public double getSaldo()
+        {
+            return saldo;
         }
     }
 }
