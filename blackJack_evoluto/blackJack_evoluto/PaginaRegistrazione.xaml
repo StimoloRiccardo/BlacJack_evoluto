@@ -1,0 +1,33 @@
+﻿<Window x:Class="blackJack_evoluto.PaginaRegistrazione"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:blackJack_evoluto"
+        mc:Ignorable="d"
+        Title="PaginaRegistrazione" Height="387" Width="784">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF007F19"/>
+                <GradientStop Color="Black" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="label_nome" Content="Nome:" HorizontalAlignment="Left" Height="33" Margin="52,26,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_nome" HorizontalAlignment="Left" Height="33" Margin="52,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="label_congnome" Content="Cognome:" HorizontalAlignment="Left" Height="33" Margin="52,118,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_cognome" HorizontalAlignment="Left" Height="33" Margin="52,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White"/>
+        <Label x:Name="label_email" Content="Email:" HorizontalAlignment="Left" Height="33" Margin="303,26,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_email" HorizontalAlignment="Left" Height="33" Margin="303,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="lable_nomeUtente" Content="Nome Utente:" HorizontalAlignment="Left" Height="33" Margin="303,118,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_nomeUtente" HorizontalAlignment="Left" Height="34" Margin="303,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="label_numeroTelefono" Content="Numero telefono:" HorizontalAlignment="Left" Height="33" Margin="530,26,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_numeroTelefono" HorizontalAlignment="Left" Height="33" Margin="530,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="label_saldoIniziale" Content="Saldo iniziale:" HorizontalAlignment="Left" Height="33" Margin="530,118,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_SaldoIniziale" HorizontalAlignment="Left" Height="33" Margin="530,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Registrati" HorizontalAlignment="Left" Height="40" Margin="624,300,0,0" VerticalAlignment="Top" Width="139" Background="#FF007F19" BorderBrush="White" Foreground="White" Click="Button_Click"/>
+        <Label x:Name="label_password" Content="Password:" HorizontalAlignment="Left" Height="33" Margin="52,217,0,0" VerticalAlignment="Top" Width="148" Foreground="White" FontSize="16" FontWeight="Bold" BorderBrush="White" BorderThickness="0,0,0,2"/>
+        <TextBox x:Name="txtBox_Password" HorizontalAlignment="Left" Height="33" Margin="52,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Background="{x:Null}" BorderBrush="#FFF9F9F9" Foreground="White"/>
+
+    </Grid>
+</Window>
