@@ -14,7 +14,13 @@ namespace blackJack_evoluto
 
         public Giocatore(string nome, string cognome, string nomeUtente, string email, string numeroTelefono, string password, double saldo)
         {
-
+            this.nome = nome;
+            this.cognome = cognome;
+            this.nomeUtente = nomeUtente;
+            this.numeroTelefono = numeroTelefono;
+            this.password = password;
+            this.email = email;
+            this.saldo = saldo;
         }
     }
 }

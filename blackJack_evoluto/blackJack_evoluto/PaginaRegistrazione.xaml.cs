@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace blackJack_evoluto
 {
@@ -27,12 +28,28 @@ namespace blackJack_evoluto
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente + ";" + txtBox_numeroTelefono + ";" + ;
+            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente.Text + ";" + txtBox_numeroTelefono.Text + ";" + txtBox_SaldoIniziale.Text + ";" + txtBox_Password.Text;
             String[] campi = riga.Split(';');
+            string path = "Utenti.csv";
 
             if (campi.Length == 7)
             {
-
+                using (StreamWriter sw = new StreamWriter(path)) { 
+                    if (!File.Exists(path))
+                    {
+                        File.CreateText(path);
+                        sw.WriteLine("Nome ; Cognome; Email ; Nome Utente ; Numero telefono ; Saldo iniziale ; Password");
+                        File.AppendAllText(path, riga + Environment.NewLine);
+                    }
+                    else
+                    {
+                        File.AppendAllText(path, riga + Environment.NewLine);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Per registrarti devi riempire tutti i campi");
             }
         }
     }
