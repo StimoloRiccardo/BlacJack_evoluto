@@ -27,8 +27,13 @@ namespace blackJack_evoluto
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente + ";" + txtBox_numeroTelefono;
+            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente + ";" + txtBox_numeroTelefono + ";" + ;
             String[] campi = riga.Split(';');
+
+            if (campi.Length == 7)
+            {
+
+            }
         }
     }
 }
