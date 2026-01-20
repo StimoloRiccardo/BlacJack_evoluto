@@ -34,41 +34,38 @@ namespace blackJack_evoluto
             String path = "Utenti.csv";
             String nomeUtenteDaCercare = txtBox_nomeUtente.Text;
 
-            if (File.Exists(path))
+            if (campi.Length==2 && File.Exists(path))
             {
-                if (campi.Length==2)
+                foreach (var rigaCaricata in File.ReadLines(path))
                 {
-                    foreach (var rigaCaricata in File.ReadLines(path))
+                    String[] campiCaricati = rigaCaricata.Split(';');
+                    if (campiCaricati.Length == 7)
                     {
-                        String[] campiCaricati = rigaCaricata.Split(';');
-                        if (campiCaricati.Length == 7)
+                        if (campiCaricati[3].Trim() == nomeUtenteDaCercare || campiCaricati[2].Trim() == nomeUtenteDaCercare)
                         {
-                            if (campiCaricati[3].Trim() == nomeUtenteDaCercare || campiCaricati[2].Trim() == nomeUtenteDaCercare)
+                            if (txtBox_Password.Text == campiCaricati[6].Trim() || pwBox_password.Password == campiCaricati[6].Trim())
                             {
-                                if (txtBox_Password.Text == campiCaricati[6].Trim() || pwBox_password.Password == campiCaricati[6].Trim())
-                                {
-                                    MessageBox.Show("accesso eseguito con successo, bentornato!");
-                                    player = new Giocatore(campiCaricati[0], campiCaricati[1], campiCaricati[2], campiCaricati[3], campiCaricati[4], double.Parse(campiCaricati[5]), campiCaricati[6]);
-                                    this.Close();
-                                }
-                                else if (txtBox_Password.Text != campiCaricati[6].Trim() || pwBox_password.Password != campiCaricati[6].Trim())
-                                {
-                                    MessageBox.Show("password errata, riprova");
-                                }
-                                break;
+                                MessageBox.Show("accesso eseguito con successo, bentornato!");
+                                player = new Giocatore(campiCaricati[0], campiCaricati[1], campiCaricati[2], campiCaricati[3], campiCaricati[4], double.Parse(campiCaricati[5]), campiCaricati[6]);
+                                this.Close();
                             }
+                            else if (txtBox_Password.Text != campiCaricati[6].Trim() || pwBox_password.Password != campiCaricati[6].Trim())
+                            {
+                                MessageBox.Show("password errata, riprova");
+                            }
+                            break;
                         }
                     }
+                }
                     
-                    if (player == null)
-                    {
-                        MessageBox.Show("nome utente non trovato, registrati per accedere");
-                    }
-                }
-                else
+                if (player == null)
                 {
-                    MessageBox.Show("Devi riempire tutti i campi per accedere");
+                    MessageBox.Show("nome utente non trovato, registrati per accedere");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Devi riempire tutti i campi per accedere");
             }
         }
 
@@ -91,14 +88,15 @@ namespace blackJack_evoluto
                 txtBox_Password.Visibility = Visibility.Collapsed;
                 pwBox_password.Visibility = Visibility.Visible;
                 passwordVisibile = false;
-                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_vedo.png", UriKind.Relative));
+                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_sento.png", UriKind.Relative));
             }
             else if (!passwordVisibile)
             {
                 txtBox_Password.Text = pwBox_password.Password;
                 pwBox_password.Visibility = Visibility.Collapsed;
                 txtBox_Password.Visibility = Visibility.Visible;
-                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_sento.png", UriKind.Relative));
+                passwordVisibile = true;
+                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_vedo.png", UriKind.Relative));
 
             }
         }
