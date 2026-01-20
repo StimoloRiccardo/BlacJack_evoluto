@@ -33,8 +33,11 @@ namespace blackJack_evoluto
             PaginaAccesso accesso = new PaginaAccesso();
             accesso.ShowDialog();
             player = accesso.getGiocatore();
-            label_nomeUtente.Content = "Nome Utente: " + player.getNomeUtente();
-            label_saldo.Content = "Saldo: " + player.getSaldo().ToString() + " €";
+            if (player!=null)
+            {
+                label_nomeUtente.Content = "Nome Utente: " + player.getNomeUtente();
+                label_saldo.Content = "Saldo: " + player.getSaldo().ToString() + " €";
+            }
         }
 
         public void setAccessoEseguito(bool accesso)

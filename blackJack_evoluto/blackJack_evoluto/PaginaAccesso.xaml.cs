@@ -91,14 +91,14 @@ namespace blackJack_evoluto
                 txtBox_Password.Visibility = Visibility.Collapsed;
                 pwBox_password.Visibility = Visibility.Visible;
                 passwordVisibile = false;
-                //immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_vedo.png"));
+                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_vedo.png", UriKind.Relative));
             }
             else if (!passwordVisibile)
             {
                 txtBox_Password.Text = pwBox_password.Password;
                 pwBox_password.Visibility = Visibility.Collapsed;
                 txtBox_Password.Visibility = Visibility.Visible;
-                //immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_sento.png"));
+                immagine_pulsante.Source = new BitmapImage(new Uri("imgs/non_sento.png", UriKind.Relative));
 
             }
         }
