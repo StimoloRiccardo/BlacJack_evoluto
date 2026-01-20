@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="919" Width="1920">
     <Grid>
-        <Image HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1920" Source="/banco.jpg" Stretch="Fill"/>
-
-        <Image HorizontalAlignment="Center" Height="1064" VerticalAlignment="Top" Width="1920" Source="/bordo.png" Stretch="Fill" Margin="0,-148,0,0" Loaded="Image_Loaded"/>
+        <Image HorizontalAlignment="Center" Height="1312" VerticalAlignment="Top" Width="1242" Source="/banco.jpg" Stretch="Fill" Margin="0,-804,0,0"/>
         <Label x:Name="label_nomeUtente" Content="" HorizontalAlignment="Left" Height="49" Margin="30,31,0,0" VerticalAlignment="Top" Width="181" FontSize="16" FontWeight="Bold" Foreground="White"/>
         <Label x:Name="label_saldo" Content="" HorizontalAlignment="Left" Height="49" Margin="30,85,0,0" VerticalAlignment="Top" Width="181" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        <Ellipse HorizontalAlignment="Center" Height="1680" Margin="0,-844,0,0" Stroke="Black" VerticalAlignment="Top" Width="1680" Fill="Black"/>
+
+        <Ellipse HorizontalAlignment="Left" Height="1500" Margin="216,-754,0,0" Stroke="Black" VerticalAlignment="Top" Width="1500" Fill="#FFF9EDED"/>
 
 
     </Grid>
