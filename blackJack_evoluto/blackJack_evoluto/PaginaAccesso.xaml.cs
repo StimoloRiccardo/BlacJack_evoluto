@@ -39,17 +39,17 @@ namespace blackJack_evoluto
                 foreach (var rigaCaricata in File.ReadLines(path))
                 {
                     String[] campiCaricati = rigaCaricata.Split(';');
-                    if (campiCaricati.Length == 7)
+                    if (campiCaricati.Length == 6)
                     {
                         if (campiCaricati[3].Trim() == nomeUtenteDaCercare || campiCaricati[2].Trim() == nomeUtenteDaCercare)
                         {
-                            if (txtBox_Password.Text == campiCaricati[6].Trim() || pwBox_password.Password == campiCaricati[6].Trim())
+                            if (txtBox_Password.Text == campiCaricati[5].Trim() || pwBox_password.Password == campiCaricati[5].Trim())
                             {
                                 MessageBox.Show("accesso eseguito con successo, bentornato!");
-                                player = new Giocatore(campiCaricati[0], campiCaricati[1], campiCaricati[2], campiCaricati[3], campiCaricati[4], double.Parse(campiCaricati[5]), campiCaricati[6]);
+                                player = new Giocatore(campiCaricati[0], campiCaricati[1], campiCaricati[2], campiCaricati[3], double.Parse(campiCaricati[4]), campiCaricati[5]);
                                 this.Close();
                             }
-                            else if (txtBox_Password.Text != campiCaricati[6].Trim() || pwBox_password.Password != campiCaricati[6].Trim())
+                            else if (txtBox_Password.Text != campiCaricati[5].Trim() || pwBox_password.Password != campiCaricati[5].Trim())
                             {
                                 MessageBox.Show("password errata, riprova");
                             }

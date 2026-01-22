@@ -28,21 +28,22 @@ namespace blackJack_evoluto
             WindowState = WindowState.Maximized;
         }
 
-        private void Image_Loaded(object sender, RoutedEventArgs e)
+        public void setAccessoEseguito(bool accesso)
+        {
+            accessoEseguito = accesso;
+        }
+        
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PaginaAccesso accesso = new PaginaAccesso();
             accesso.ShowDialog();
             player = accesso.getGiocatore();
-            if (player!=null)
+            if (player != null)
             {
                 label_nomeUtente.Content = "Nome Utente: " + player.getNomeUtente();
                 label_saldo.Content = "Saldo: " + player.getSaldo().ToString() + " €";
             }
-        }
-
-        public void setAccessoEseguito(bool accesso)
-        {
-            accessoEseguito = accesso;
         }
     }
 }

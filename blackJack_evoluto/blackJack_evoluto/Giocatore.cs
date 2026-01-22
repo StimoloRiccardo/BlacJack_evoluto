@@ -8,16 +8,15 @@ namespace blackJack_evoluto
 {
     public class Giocatore
     {
-        private string nomeUtente, password, email, numeroTelefono, nome, cognome;
+        private string nomeUtente, password, email, nome, cognome;
         private double saldo;
         private int numeroVittorie;
 
-        public Giocatore(string nome, string cognome, string email, string nomeUtente, string numeroTelefono, double saldo, string password)
+        public Giocatore(string nome, string cognome, string email, string nomeUtente, double saldo, string password)
         {
             this.nome = nome;
             this.cognome = cognome;
             this.nomeUtente = nomeUtente;
-            this.numeroTelefono = numeroTelefono;
             this.password = password;
             this.email = email;
             this.saldo = saldo;

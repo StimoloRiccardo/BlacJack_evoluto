@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:blackJack_evoluto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="919" Width="1920">
+        Title="MainWindow" Height="919" Width="1920" Loaded="Window_Loaded">
     <Grid>
         <Image HorizontalAlignment="Center" Height="1312" VerticalAlignment="Top" Width="1242" Source="/banco.jpg" Stretch="Fill" Margin="0,-804,0,0"/>
         <Label x:Name="label_nomeUtente" Content="" HorizontalAlignment="Left" Height="49" Margin="30,31,0,0" VerticalAlignment="Top" Width="181" FontSize="16" FontWeight="Bold" Foreground="White"/>

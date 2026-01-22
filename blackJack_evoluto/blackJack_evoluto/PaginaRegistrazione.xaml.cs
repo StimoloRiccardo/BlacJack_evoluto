@@ -28,17 +28,17 @@ namespace blackJack_evoluto
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente.Text + ";" + txtBox_numeroTelefono.Text + ";" + txtBox_SaldoIniziale.Text + ";" + txtBox_Password.Text;
+            String riga = txtBox_nome.Text + ";" + txtBox_cognome.Text + ";" + txtBox_email.Text + ";" + txtBox_nomeUtente.Text + ";" + txtBox_SaldoIniziale.Text + ";" + txtBox_Password.Text;
             String[] campi = riga.Split(';');
             string path = "Utenti.csv";
 
-            if (campi.Length == 7)
+            if (campi.Length == 6)
             {
                 using (StreamWriter sw = new StreamWriter(path)) { 
                     if (!File.Exists(path))
                     {
                         File.CreateText(path);
-                        sw.WriteLine("Nome ; Cognome; Email ; Nome Utente ; Numero telefono ; Saldo iniziale ; Password");
+                        sw.WriteLine("Nome ; Cognome; Email ; Nome Utente ; Saldo iniziale ; Password");
                         sw.WriteLine(riga + Environment.NewLine);
                         this.Close();
                     }
