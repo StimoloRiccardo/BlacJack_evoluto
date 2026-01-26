@@ -1,0 +1,36 @@
+#
+#
+#
+
+newmtl Mesh _mat0
+illum 2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ns 800.000000
+map_Kd Mat123_baseColor.jpg
+
+newmtl Mesh _mat1
+illum 2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ns 800.000000
+map_Kd material_baseColor.jpg
+
+newmtl Mesh _mat2
+illum 2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ns 800.000000
+map_Kd Mat1_baseColor.jpg
+
+newmtl Mesh _mat3
+illum 2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ns 800.000000
+map_Kd Mat12_baseColor.jpg
+

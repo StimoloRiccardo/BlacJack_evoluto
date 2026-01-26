@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace prova
+namespace _3d
 {
     /// <summary>
     /// Logica di interazione per App.xaml
