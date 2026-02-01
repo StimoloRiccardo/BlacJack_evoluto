@@ -59,17 +59,8 @@
     <Reference Include="HelixToolkit.Maths, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
       <HintPath>..\packages\HelixToolkit.Maths.3.1.2\lib\net48\HelixToolkit.Maths.dll</HintPath>
     </Reference>
-    <Reference Include="HelixToolkit.SharpDX, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>..\packages\HelixToolkit.SharpDX.3.1.2\lib\net48\HelixToolkit.SharpDX.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit.SharpDX.Assimp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>..\packages\HelixToolkit.SharpDX.Assimp.3.1.2\lib\net48\HelixToolkit.SharpDX.Assimp.dll</HintPath>
-    </Reference>
     <Reference Include="HelixToolkit.Wpf, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
       <HintPath>..\packages\HelixToolkit.Wpf.3.1.2\lib\net48\HelixToolkit.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit.Wpf.SharpDX, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>..\packages\HelixToolkit.Wpf.SharpDX.3.1.2\lib\net48\HelixToolkit.Wpf.SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
